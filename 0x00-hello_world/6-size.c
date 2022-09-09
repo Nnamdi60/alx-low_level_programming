@@ -1,9 +1,10 @@
 #include <stdio.h>
 /**
- * main - Point of entry
- * Description: Describing the program
+ *main - Point of entry
  *
- * Return: Always 0 (success)
+ *Description: Describing the program
+ *
+ *Return: Always 0 (success)
  */
 int main(void)
 {
