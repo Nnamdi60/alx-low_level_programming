@@ -1,1 +1,1 @@
-Script that generates assembly code
+The simplicity of UNIX
