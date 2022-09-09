@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
  *  main - Print out the main function
- *
- *  Description: 'Describing the main function'
- *  Return : 0 
+ *  Description: using the main function
+ *  this program prints "Programming is like a multilingual puzzle"
+ *  Return : Always 0 (success)
  */
 int main(void)
 {
