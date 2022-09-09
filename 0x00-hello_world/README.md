@@ -1,1 +1,1 @@
-The simplicity of UNIX
+Be a genuis to understand simplicity
