@@ -1,1 +1,1 @@
-Proper grammer
+Territory does not make a nation
