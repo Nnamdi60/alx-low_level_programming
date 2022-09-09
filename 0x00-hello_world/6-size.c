@@ -2,7 +2,7 @@
 /**
  *main - Point of entry
  *
- *Description: Describing the program
+ *Description:'Describing the program'
  *
  *Return: Always 0 (success)
  */
