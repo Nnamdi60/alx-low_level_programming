@@ -1,1 +1,1 @@
-Print single digit number
+Print single number digits starting from ten
