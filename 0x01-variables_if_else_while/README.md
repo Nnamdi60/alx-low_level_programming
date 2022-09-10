@@ -1,1 +1,1 @@
-Digit of a number stored in variables
+Iplay what I call alphabetic game
