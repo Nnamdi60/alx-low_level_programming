@@ -1,1 +1,1 @@
-I never taught it will play off
+Print single digit number
