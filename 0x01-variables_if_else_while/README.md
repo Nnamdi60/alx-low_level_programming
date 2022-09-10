@@ -1,1 +1,1 @@
-Iplay what I call alphabetic game
+Prints alphabet in lower case
