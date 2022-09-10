@@ -1,1 +1,1 @@
-Variables if else while
+Digit of a number stored in variables
