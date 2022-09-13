@@ -1,59 +1,33 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
 /**
  * main - Entry point
  *
- * Return: Always 0 (success/correct)
+ * Return: Always 0
  */
+
 int main(void)
-
-
-
 {
-	int first_nums;
-	int second_nums;
+	int p, q;
 
-
-	for (first_nums = 0; first_nums < 100 ; first_nums++)
+	for (p = 0; p <= 98; p++)
 	{
-		for (second_nums = first_nums + 1 ; second_nums < 100; second_nums++)
+		for (q = p + 1; q <= 99; q++)
 		{
+			putchar((p / 10) + '0');
+			putchar((p % 10) + '0');
+			putchar(' ');
+			putchar((q / 10) + '0');
+			putchar((q % 10) + '0');
 
-			putchar (first_nums / 10 + '0');
-			putchar (first_nums % 10 + '0');
-
-
-			putchar (' ');
-
-			putchar (second_nums / 10 + '0');
-			putchar (first_nums % 10 + '0');
-
-
-			putchar (' ');
-
-
-			putchar (second_nums / 10 + '0');
-			putchar (second_nums % 10 + '0');
-
-
-
-			if (first_nums == 98 && second_nums == 99)
-			{
-				break;
-			}
-
-
-
+			if (p == 98 && q == 99)
+				continue;
 			putchar(',');
-			putchar (' ');
-
-
+			putchar(' ');
 		}
-
 	}
-
 	putchar('\n');
-
-
 	return (0);
-
 }
