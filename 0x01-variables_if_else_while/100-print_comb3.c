@@ -1,29 +1,32 @@
 #include <stdio.h>
+#include <unistd.h>
 /**
- * main - print single digit number begining from  0
+ * main - All possible combinations of 2 digits
  *
- * Return: return 0 at the end
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int i, j;
+	int a, b;
 
-	for (i = 0; i <= 9; i++)
+	for (a = '0'; a <= '9'; a++)
 	{
-		for (j = 1; j <= 9; j++)
+		for (b = '0'; b <= '9'; b++)
 		{
-			if (j > i)
+			if (a < b)
 			{
-				putchar(i + '0');
-				putchar(j + '0');
-				if (i != 8)
+
+				putchar(a);
+				putchar(b);
+
+				if (a != '8' || (a == '8' && b != '9'))
+				{
 					putchar(',');
-				   	putchar('');
+					putchar(' ');
+				}
 			}
 		}
 	}
- }
-putchar("\n');
- return (0);
-
+	putchar('\n');
+	return (0);
 }
