@@ -1,1 +1,1 @@
-Functions that prints the alphabet in lowercase followed by line
+Functions that prints ten times the alphabet
