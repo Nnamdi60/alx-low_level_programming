@@ -3,6 +3,7 @@
 /**
  * _memset - main function.
  * @s: Pointer to the buffer.
+ * @b: The constant byte.
  * @n: Size of buffer to fill.
  *
  * Description: This function fills memory with a constant byte.
