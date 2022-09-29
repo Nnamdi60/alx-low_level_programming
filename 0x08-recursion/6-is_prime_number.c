@@ -25,7 +25,7 @@ int is_prime_number(int n)
  * @num: the number to be checked
  * @div: the result of division
  * Return: 1 if num is divisible or 0 if numis not divisible
- * */
+ */
 int is_divisible(int num, int div)
 {
 
