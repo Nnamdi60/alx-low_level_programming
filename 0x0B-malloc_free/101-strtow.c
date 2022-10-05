@@ -50,3 +50,5 @@ char **strtow(char *str)
 	words[k] = NULL;
 	return (words);
 }
+
+	
