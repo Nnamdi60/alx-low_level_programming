@@ -3,50 +3,38 @@
 #include <stdio.h>
 
 /**
- * strtow - splits a string into words.
- * @str: string to be splitted
- * Return: pointer to an array of strings (words) or null
+ * argstostr - Concatenate all arguements
+ * @ac: Number of arguements
+ * @av: Pointer to string arguements
+ * Return: Pointer to new string
  */
-
-char **strtow(char *str)
+char *argstostr(int ac, char **av)
 {
-	int i, j, k = 0, l, m, count = 0, len;
-	char **words;
+	char *cont;
+	int i;
+	int j;
+	int len = 0;
 
-	if (str == NULL || str[0] == '\0')
+	if (ac == 0 || av == NULL)
 		return (NULL);
-
-	for (i = 0; str[i] != '\0'; i++)
-		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
-			count++;
-	if (count == 0)
-		return (NULL);
-	words = malloc((count + 1) * sizeof(char *));
-	if (words == NULL)
+	for (i = 0; i < ac; i++)
 	{
-		free(words);
+		j = 0;
+		while (av[i][j++])
+			len++;
+	}
+	len++;
+	cont = malloc(sizeof(**av) * (len + ac));
+	if (cont == NULL)
 		return (NULL);
-	}
-	for (i = 0; str[i] != '\0' &&  k < count; i++)
+	len = 0;
+	for (i = 0; i < ac; i++)
 	{
-		if (str[i] != ' ')
-		{
-			len = 0;
-			for (j = i; str[j] != ' ' && str[j] != '\0'; j++)
-				len++;
-			words[k] = malloc((len + 1) * sizeof(char));
-			if (words[k] == NULL)
-			{
-				for (m = 0; m < k; m++)
-					free(words[k]);
-				free(words);
-				return (NULL);
-			}
-			for (l = 0; l < len; l++, i++)
-				words[k][l] = str[i];
-			words[k][l] = '\0', k++;
-		}
+		j = 0;
+		while (av[i][j])
+			cont[len++] = av[i][j++];
+		cont[len++] = '\n';
 	}
-	words[k] = NULL;
-	return (words);
+	cont[len] = '\0';
+	return (cont);
 }
