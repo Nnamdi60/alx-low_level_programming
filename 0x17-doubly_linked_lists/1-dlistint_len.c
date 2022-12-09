@@ -1,34 +1,17 @@
-#ifndef _LISTSH_
-#define _LISTH_
-
-#include <stdlib.h>
-#include <stdio.h>
-
+#include "lists.h"
 /**
- * struct dlistint_s - doubly linked list
- * @n: integer
- * @prev: points to the previous node
- * @next: points to the next node
- *
- * Description: doubly linked list node structure
- * for Alx project
+ * dlistint_len - Return number of elements in dll
+ * @h: Pointer to struct of ddl
+ * Return: The amount of elements in dll
  */
-typedef struct dlistint_s
+size_t dlistint_len(const dlistint_t *h)
 {
-	int n;
-	struct dlistint_s *prev;
-	struct dlistint_s *next;
-} dlistint_t;
+	int count_node = 0;
 
-
-size_t print_dlistint(const dlistint_t *h);
-size_t dlistint_len(const dlistint_t *h);
-dlistint_t *add_dnodeint(dlistint_t **head, const int n);
-dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
-void free_dlistint(dlistint_t *head);
-dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
-int sum_dlistint(dlistint_t *head);
-dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
-int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
-
-#endif
+	while (h != NULL)
+	{
+		h = h->next;
+		count_node++;
+	}
+	return (count_node);
+}
