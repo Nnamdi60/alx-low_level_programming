@@ -1,1 +1,1 @@
-more functions more nested loop
+0x1A hash tables
